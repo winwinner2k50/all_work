@@ -50,7 +50,11 @@ if [ -f "CodeChecker.exe" ]; then
     done
 fi
 
-
+echo
+echo
+echo "_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_"
+echo
+echo
 
 # If scripted
 if [ $status == "0" ]; then
@@ -65,6 +69,12 @@ if [ $status == "0" ]; then
 	echo "$t_output"
 fi
 
+echo
+echo
+echo "_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_"
+echo
+echo
+
 # If buildable
 if [ $status == "0" ]; then
 	# Run func_tests on all builds
@@ -77,6 +87,12 @@ if [ $status == "0" ]; then
 	fi
 	echo "$t_output"
 fi
+
+echo
+echo
+echo "_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_"
+echo
+echo
 
 # If testable
 if [ $status == "0" ]; then

@@ -8,25 +8,10 @@ fail="\033[1;31mFAIL\033[0m"
 one_level_tab="    "
 
 verbose_opt="-v"
-# Check options
-tabs=""
-if [ $# -gt 1 ]; then
-	echo >&2 Неправильное число параметров
-	status="160"
-fi
-
-if [ $# -gt 0 ]; then
-	if eval echo "$1" | grep -Eo "^	*$"; then
-		tabs="$tabs""$1"
-	else
-		echo >&2 Неправильный параметр 1: "$1"
-		status="160"
-	fi
-fi
 
 prefix="build"
-#builds=("release" "debug" "debug_asan" "debug_msan" "debug_ubsan")
-builds=("release")
+builds=("release" "debug" "debug_asan" "debug_msan" "debug_ubsan")
+
 for build in "${builds[@]}"; do
 	if [ $status == "0" ]; then
 		#./clean.sh
